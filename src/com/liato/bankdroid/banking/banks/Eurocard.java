@@ -53,7 +53,7 @@ public class Eurocard extends Bank {
 	private static final int INPUT_TYPE_USERNAME = InputType.TYPE_CLASS_PHONE;
     private static final String INPUT_HINT_USERNAME = "ÅÅMMDDXXXX";
 	
-	private Pattern reAccounts = Pattern.compile("Welcomepagecardimagecontainer\">\\s*[^<]+<br>[^>]+<br>([^>]+)</div>\\s*</div>\\s*</div>.*?indentationwrapper\">\\s*<a\\s*href=\"getPendingTransactions\\.do\\?id=([^\"]+)\">.*?billedamount\">([^<]+)</div>", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+	private Pattern reAccounts = Pattern.compile("Welcomepagecardimagecontainer\">\\s*[^<]+<br>[^>]+<br>([^>]+)</div>.*?indentationwrapper\">\\s*<a\\s*href=\"getPendingTransactions\\.do\\?id=([^\"]+)\">.*?billedamount\">([^<]+)</div>", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
 	private Pattern reSaldo = Pattern.compile("Billingunitbalanceamount\">\\s*([^<]+)<", Pattern.CASE_INSENSITIVE);
 	private Pattern reTransactions = Pattern.compile("transcol1\">\\s*<span>([^<]+)</span>\\s*</td>\\s*<td[^>]+>\\s*<span>([^<]+)</span>\\s*</td>\\s*<td[^>]+>\\s*(?:<div[^>]+>\\s*)?<span>([^<]*)</span>\\s*(?:</div>\\s*)?</td>\\s*<td[^>]+>\\s*<span>([^<]*)</span>\\s*</td>\\s*<td[^>]+>\\s*<span>([^<]*)</span>\\s*</td>\\s*<td[^>]+>\\s*<span>([^<]*)</span>\\s*</td>\\s*<td[^>]+>\\s*<span>([^<]+)</span>", Pattern.CASE_INSENSITIVE);
     private ArrayList<String> accountIds = new ArrayList<String>();
